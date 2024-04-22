@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Sunera Viyangoda Personal Portfolio",
 };
 
-const bodyClasses = [lexend.className, "bg-dark"]
+const bodyClasses = [lexend.className, "bg-dark", "px-[20%]"]
 
 export default function RootLayout({
   children,

@@ -1,24 +1,28 @@
 import Image from "next/image";
 import Button from "./elements/button";
+import Container from "./components/layout/container";
+import FlexCenteredDiv from "./components/layout/flex-centered-div";
 
 export default function Home() {
   return (
-    <div className="h-screen flex flex-col justify-center items-center">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="flex justify-center items-center px-5 py-5">
-          <Image src={"./images/landing-page.svg"} width={620} height={620} alt='landing-page' />
-        </div>
-        <div className="flex justify-center items-center px-5 py-5">
-          <div className="flex-1 flex-column">
-            <div className="text-h1 py-2 bg-gradient-to-r from-primary to-highlight bg-clip-text text-transparent">Hello there!</div>
-            <p className="w-3/4 py-1 pb-5">I am Sunera, a software engineer with a passion for building amazing things. From web applications to mobile apps, I love turning ideas into reality.</p>
+    <Container size="screen">
+      <div className="flex">
+        <FlexCenteredDiv>
+          <div className="px-8 mt-10">
+            <Image src={"./images/landing-page.svg"} width={620} height={620} alt='landing-page' />
+          </div>
+        </FlexCenteredDiv>
+        <FlexCenteredDiv>
+          <div className="px-8 mt-10">
+            <div className="text-h1 py-2 text-transparent bg-gradient-to-r from-[#0099A2] from-0% to-[#F1F8F0] to-100% bg-clip-text">Hello there!</div>
+            <p>I am Sunera, a software engineer with a passion for building amazing things. From web applications to mobile apps, I love turning ideas into reality.</p>
             <div className="my-5 py-5">
               <p className="py-5 my-3">ready to see what I have built?</p>
               <Button>Explore Portfolio</Button>
             </div>
           </div>
-        </div>
+        </FlexCenteredDiv>
       </div>
-    </div>
+    </Container>
   );
 }
