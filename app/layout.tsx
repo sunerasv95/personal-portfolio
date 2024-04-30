@@ -10,8 +10,6 @@ export const metadata: Metadata = {
   description: "Sunera Viyangoda Personal Portfolio",
 };
 
-const bodyClasses = [lexend.className, "bg-dark", "px-[20%]"]
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -19,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={bodyClasses.join(" ")}>
+      <body className={`bg-dark px-[15%] ${lexend.className} md:px-[20%]`}>
         <Navbar />
         {children}
       </body>

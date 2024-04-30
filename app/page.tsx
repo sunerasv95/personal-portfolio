@@ -1,18 +1,18 @@
 import Image from "next/image";
 import Button from "./elements/button";
 import Container from "./components/layout/container";
-import FlexCenteredDiv from "./components/layout/flex-centered-div";
+import Column from "./components/layout/column";
 
 export default function Home() {
   return (
     <Container size="screen">
       <div className="flex">
-        <FlexCenteredDiv>
+        <Column>
           <div className="px-8 mt-10">
             <Image src={"./images/landing-page.svg"} width={620} height={620} alt='landing-page' />
           </div>
-        </FlexCenteredDiv>
-        <FlexCenteredDiv>
+        </Column>
+        <Column>
           <div className="px-8 mt-10">
             <div className="text-h1 py-2 text-transparent bg-gradient-to-r from-[#0099A2] from-0% to-[#F1F8F0] to-100% bg-clip-text">Hello there!</div>
             <p>I am Sunera, a software engineer with a passion for building amazing things. From web applications to mobile apps, I love turning ideas into reality.</p>
@@ -21,7 +21,7 @@ export default function Home() {
               <Button>Explore Portfolio</Button>
             </div>
           </div>
-        </FlexCenteredDiv>
+        </Column>
       </div>
     </Container>
   );

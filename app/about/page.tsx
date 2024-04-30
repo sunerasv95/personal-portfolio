@@ -3,7 +3,7 @@ import Tabs from "../components/tabs";
 import Timeline from "../components/timeline";
 import Badge from "../elements/badge";
 import Container from "../components/layout/container";
-import FlexCenteredDiv from "../components/layout/flex-centered-div";
+import Column from "../components/layout/column";
 
 
 const work = [
@@ -88,16 +88,16 @@ export default function About() {
     return (
         <Container size="screen">
             <div className="flex">
-                <FlexCenteredDiv>
+                <Column>
                     <div className="px-8 mt-10">
                         <Image src={"./images/face.svg"} width={460} height={460} alt='landing-page' />
                     </div>
-                </FlexCenteredDiv>
-                <FlexCenteredDiv>
+                </Column>
+                <Column>
                     <div className="px-8 mt-10">
                         <Tabs tabs={tabs} />
                     </div>
-                </FlexCenteredDiv>
+                </Column>
             </div>
         </Container>
     );

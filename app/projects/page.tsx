@@ -1,15 +1,62 @@
-import Image from "next/image";
 import DefaultCard from "../components/card/default-card";
-import FlippableCard from "../components/card/flippable-card";
-import FlexCenteredDiv from "../components/layout/flex-centered-div";
+import ProjectsGrid from "../components/grids/projects-grid";
+import Column from "../components/layout/column";
 import Container from "../components/layout/container";
+import Modal from "../components/layout/modal";
 
 const projects = {
     featured: [
         {
-            title: (<p>{'360 Rewards'}</p>),
-            summary: (<p>{'An e-commerce platform with features for browsing products,  adding them to the cart, and checking out securely. e-commerce platform with features for'}</p>),
-            description: (<p>{'A responsive e-commerce platform for tech enthusiasts, offering a wide range of gadgets and accessories. Built with React, Node.js, and MongoDB, featuring user authentication, product search, and secure payment processing.'}</p>)
+            id: 1,
+            title: '360 Rewards 1111',
+            description: 'A responsive e-commerce platform for tech enthusiasts, offering a wide range of gadgets and accessories. Built with React, Node.js, and MongoDB, featuring user authentication, product search, and secure payment processing.'
+        },
+        {
+            id: 2,
+            title: '360 Rewards 2222',
+            description: 'A responsive e-commerce platform for tech enthusiasts, offering a wide range of gadgets and accessories. Built with React, Node.js, and MongoDB, featuring user authentication, product search, and secure payment processing.'
+        },
+        {
+            id: 3,
+            title: '360 Rewards 3333',
+            description: 'A responsive e-commerce platform for tech enthusiasts, offering a wide range of gadgets and accessories. Built with React, Node.js, and MongoDB, featuring user authentication, product search, and secure payment processing.'
+        }
+    ],
+    all: [
+        {
+            id: 4,
+            title: '360 Rewards',
+            description: 'A responsive e-commerce platform for tech enthusiasts, offering a wide range of gadgets and accessories. Built with React, Node.js, and MongoDB, featuring user authentication, product search, and secure payment processing.'
+        },
+        {
+            id: 5,
+            title: '360 Rewards',
+            description: 'A responsive e-commerce platform for tech enthusiasts, offering a wide range of gadgets and accessories. Built with React, Node.js, and MongoDB, featuring user authentication, product search, and secure payment processing.'
+        },
+        {
+            id: 6,
+            title: '360 Rewards',
+            description: 'A responsive e-commerce platform for tech enthusiasts, offering a wide range of gadgets and accessories. Built with React, Node.js, and MongoDB, featuring user authentication, product search, and secure payment processing.'
+        },
+        {
+            id: 7,
+            title: '360 Rewards',
+            description: 'A responsive e-commerce platform for tech enthusiasts, offering a wide range of gadgets and accessories. Built with React, Node.js, and MongoDB, featuring user authentication, product search, and secure payment processing.'
+        },
+        {
+            id: 8,
+            title: '360 Rewards',
+            description: 'A responsive e-commerce platform for tech enthusiasts, offering a wide range of gadgets and accessories. Built with React, Node.js, and MongoDB, featuring user authentication, product search, and secure payment processing.'
+        },
+        {
+            id: 9,
+            title: '360 Rewards',
+            description: 'A responsive e-commerce platform for tech enthusiasts, offering a wide range of gadgets and accessories. Built with React, Node.js, and MongoDB, featuring user authentication, product search, and secure payment processing.'
+        },
+        {
+            id: 10,
+            title: '360 Rewards',
+            description: 'A responsive e-commerce platform for tech enthusiasts, offering a wide range of gadgets and accessories. Built with React, Node.js, and MongoDB, featuring user authentication, product search, and secure payment processing.'
         }
     ]
 }
@@ -17,96 +64,8 @@ const projects = {
 export default function Projects() {
     return (
         <Container size="default">
-            <section className="my-20">
-                <h5 className="text-h5 font-bold py-10">Featured Projects</h5>
-                <div className="flex gap-8 my-8">
-                    <FlexCenteredDiv>
-                        <DefaultCard
-                            width={80}
-                            height={96}
-                            title="This is sample card title"
-                            description="An e-commerce platform with features for browsing products,  adding them to the cart, and checking out securely. e-commerce platform with features for"
-                            withImage={true}
-                            imagePath="./images/cash-me.svg"
-                        />
-                    </FlexCenteredDiv>
-                    <FlexCenteredDiv>
-                        <DefaultCard
-                            width={80}
-                            height={96}
-                            title="This is sample card title"
-                            description="An e-commerce platform with features for browsing products,  adding them to the cart, and checking out securely. e-commerce platform with features for"
-                            withImage={true}
-                            imagePath="./images/cash-me.svg"
-                        />
-                    </FlexCenteredDiv>
-                    <FlexCenteredDiv>
-                        <DefaultCard
-                            width={80}
-                            height={96}
-                            title="This is sample card title"
-                            description="An e-commerce platform with features for browsing products,  adding them to the cart, and checking out securely. e-commerce platform with features for"
-                            withImage={true}
-                            imagePath="./images/cash-me.svg"
-                        />
-                    </FlexCenteredDiv>
-                </div>
-            </section>
-            <section className="my-20">
-                <h5 className="text-h5 font-bold py-10">All Projects</h5>
-                <div className="flex gap-8 my-8">
-                    <FlexCenteredDiv>
-                        <DefaultCard
-                            width={80}
-                            height={96}
-                            title="This is sample card title"
-                            description="An e-commerce platform with features for browsing products,  adding them to the cart, and checking out securely. e-commerce platform with features for"
-                        />
-                    </FlexCenteredDiv>
-                    <FlexCenteredDiv>
-                        <DefaultCard
-                            width={80}
-                            height={96}
-                            title="This is sample card title"
-                            description="An e-commerce platform with features for browsing products,  adding them to the cart, and checking out securely. e-commerce platform with features for"
-                        />
-                    </FlexCenteredDiv>
-                    <FlexCenteredDiv>
-                        <DefaultCard
-                            width={80}
-                            height={96}
-                            title="This is sample card title"
-                            description="An e-commerce platform with features for browsing products,  adding them to the cart, and checking out securely. e-commerce platform with features for"
-                        />
-                    </FlexCenteredDiv>
-                </div>
-                <div className="flex gap-8 my-8">
-                    <FlexCenteredDiv>
-                        <DefaultCard
-                            width={80}
-                            height={96}
-                            title="This is sample card title"
-                            description="An e-commerce platform with features for browsing products,  adding them to the cart, and checking out securely. e-commerce platform with features for"
-                        />
-                    </FlexCenteredDiv>
-                    <FlexCenteredDiv>
-                        <DefaultCard
-                            width={80}
-                            height={96}
-                            title="This is sample card title"
-                            description="An e-commerce platform with features for browsing products,  adding them to the cart, and checking out securely. e-commerce platform with features for"
-                        />
-                    </FlexCenteredDiv>
-                    <FlexCenteredDiv>
-                        <DefaultCard
-                            width={80}
-                            height={96}
-                            title="This is sample card title"
-                            description="An e-commerce platform with features for browsing products,  adding them to the cart, and checking out securely. e-commerce platform with features for"
-                        />
-                    </FlexCenteredDiv>
-                </div>
-            </section>
-        </Container>
+            <ProjectsGrid heading="Featured Projects" data={projects.featured} />
+            <ProjectsGrid heading="All Projects" data={projects.all} />
+        </Container >
     );
 }

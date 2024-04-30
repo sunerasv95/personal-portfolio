@@ -14,12 +14,13 @@ export const Navbar: FunctionComponent<props> = ({ navItems }) => {
     const [navbar, setNavbar] = useState(false);
 
     return (
-        <header className='flex justify-between items-center h-100 w-full bg-dark fixed top-0 left-0 right-0 z-10 px-[20%] py-6'>
+        <header className='flex justify-between items-center h-100 w-full bg-dark shadow-xl 
+            fixed top-0 left-0 right-0 z-10 px-[15%] py-6 md:px-[20%]'>
             <Link href="/">
                 <Image src={"./images/app-logo.svg"} width={40} height={70} alt='logo' />
             </Link>
             <nav>
-                <ul>
+                <ul className='hidden'>
                     <li className="inline-block text-base text-light py-2 ps-16 text-center">
                         <Link href="projects" onClick={() => setNavbar(!navbar)}>
                             projects
