@@ -19,9 +19,9 @@ const Modal: FunctionComponent<props> = ({
     return (
         <div className={`fixed inset-0 z-50 flex items-center justify-center bg-gray-500 
             bg-opacity-75 transition-opacity duration-300 ease-in-out ${!isOpen ? 'hidden' : ''}`}>
-            <div className='flex flex-col w-[30%] bg-white rounded-lg p-7'>
+            <div className='flex flex-col w-[30%] bg-neutral rounded-lg p-7'>
                 <div className='flex justify-end'>
-                    <IconButton icon='xCircle' onClick={onClose} />
+                    <IconButton icon='xCircle' iconSize="lg" iconColor='#121F18' onClick={onClose} />
                 </div>
                 <div className='my-2 py-2 px-3'>{children}</div>
             </div>

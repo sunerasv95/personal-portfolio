@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import React, { FunctionComponent } from 'react'
+import { usePathname } from 'next/navigation'
+import { FunctionComponent, useState } from 'react'
 
 interface props {
     path: string
@@ -11,9 +12,14 @@ const NavItem: FunctionComponent<props> = ({
     linkName
 }) => {
 
+    const pathname = usePathname();
+    console.log(pathname);
+
     return (
-        <li className="inline-block text-base text-light py-5 ps-16 
-            text-center hover:text-highlight">
+        <li className={`inline-block text-base 
+        ${pathname === path
+                ? 'text-highlight'
+                : 'text-neutral'} py-5 ps-16 text-center hover:text-highlight`}>
             <Link href={path}>
                 {linkName}
             </Link>
@@ -21,4 +27,4 @@ const NavItem: FunctionComponent<props> = ({
     )
 }
 
-export default NavItem
+export default NavItem;

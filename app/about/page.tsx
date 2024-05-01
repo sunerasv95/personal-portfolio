@@ -3,8 +3,6 @@ import Tabs from "../components/tabs";
 import Timeline from "../components/timeline";
 import Badge from "../elements/badge";
 import Container from "../components/layout/container";
-import Column from "../components/layout/column";
-
 
 const work = [
     {
@@ -52,7 +50,9 @@ const tabs = [
     {
         tabName: 'Professional',
         heading: 'Professional Background',
-        content: "I'm Sunera Viyangoda, a seasoned software engineer with 4 years of experience in FinTech industry. Throughout my career, I've had the opportunity to work on diverse projects, ranging from CMS applications to service-oriented reward systems and customized reward accumulation systems."
+        content: `I'm Sunera Viyangoda, a seasoned software engineer with 4 years of experience in FinTech industry. 
+                Throughout my career, I've had the opportunity to work on diverse projects, ranging from CMS applications to 
+                service-oriented reward systems and customized reward accumulation systems.`
     },
     {
         tabName: 'Experience',
@@ -79,7 +79,11 @@ const tabs = [
     {
         tabName: 'Personal',
         heading: 'Personal Background',
-        content: "Outside of my professional endeavors, I'm an avid outdoor enthusiast and creative spirit. You'll often find me hitting the trails for a refreshing hike, catching waves on my surfboard, or capturing moments through the lens of my camera. I'm also deeply passionate about electronic music and enjoy exploring new beats and rhythms. Balancing my love for adventure with networking and connecting with fellow professionals in the tech community is what keeps me inspired and energized. Let's embark on this journey together and discover the perfect blend of work and play"
+        content: `Outside of my professional endeavors, I'm an avid outdoor enthusiast and creative spirit. You'll often find me hitting 
+                the trails for a refreshing hike, catching waves on my surfboard, or capturing moments through the lens of my camera. I'm also deeply 
+                passionate about electronic music and enjoy exploring new beats and rhythms. Balancing my love for adventure with networking and connecting 
+                with fellow professionals in the tech community is what keeps me inspired and energized. Let's embark on this journey together and discover 
+                the perfect blend of work and play`
 
     }
 ];
@@ -88,11 +92,12 @@ const tabs = [
 export default function About() {
     return (
         <Container size="screen">
-            <div className="flex flex-col lg:flex-row gap-8">
+            <div className="flex flex-col lg:flex-row gap-8 lg:py-8">
                 <div className="flex justify-center items-start lg:w-[50%]">
-                    <Image className="md:w-460 md:h-460" src={"./images/face.svg"} width={460} height={460} alt='landing-page' />
+                    <Image src={"./images/face.svg"} width={460} height={460}
+                        style={{ width: 460, height: 'auto' }} alt='landing-page' />
                 </div>
-                <div className="flex justify-center items-start lg:items-center lg:w-[50%]">
+                <div className="flex justify-start items-start lg:w-[50%] lg:pt-5">
                     <Tabs tabs={tabs} />
                 </div>
             </div>

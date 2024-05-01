@@ -24,10 +24,10 @@ export const Navbar: FunctionComponent<props> = ({ navItems }) => {
             </Link>
             <nav>
                 <ul className='hidden md:flex'>
-                    <NavItem linkName='projects' path='projects' />
-                    <NavItem linkName='about' path='about' />
-                    <NavItem linkName='contact' path='contact' />
-                    <NavItem linkName='blog' path='blog' />
+                    <NavItem linkName='projects' path='/projects' />
+                    <NavItem linkName='about' path='/about' />
+                    <NavItem linkName='contact' path='/contact' />
+                    <NavItem linkName='blog' path='/blog' />
                 </ul>
                 <div className='flex md:hidden lg:hidden'>
                     <IconButton icon='bars' iconSize="lg" onClick={() => setSidebarShow(!sidebarShow)} />
