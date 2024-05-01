@@ -40,7 +40,7 @@ const ProjectsGrid: FunctionComponent<props> = ({ heading, data }) => {
             </Modal>
             <section className="my-20">
                 <h5 className="text-h5 font-bold py-10">{heading}</h5>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {
                         data.map((project, i) => (
                             <div key={i} className="overflow-hidden">

@@ -30,7 +30,7 @@ const Button: FunctionComponent<props &
         }
 
         const outlinedClasses = `border`;
-        const filedClasses = `bg-gradient-to-r from-[#54BCCE] from-0% to-[#32C4C0] to-100%`;
+        const filedClasses = `bg-gradient-to-r from-highlight from-10% to-primary to-100%`;
 
         const buttonClasses = `text-base text-center inline-block items-center rounded-lg   
             ${sizeClasses[size]} ${mode === 'outlined' ? outlinedClasses : filedClasses}`;

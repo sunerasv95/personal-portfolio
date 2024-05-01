@@ -6,6 +6,6 @@ interface props {
 }
 
 const Container: FunctionComponent<props> = ({ size, children }) =>
-    <div className={`container mx-auto py-[20%] md:py-[10%] ${size === "screen" ?? 'h-screen'}`}>{children}</div>
+    <div className={`container mx-auto py-40 ${size === "screen" ?? 'h-screen'}`}>{children}</div>
 
 export default Container;

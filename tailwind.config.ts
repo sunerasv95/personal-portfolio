@@ -18,6 +18,8 @@ const config: Config = {
         "blue-green": "#54BCCE",
         sea: "#44A08D",
         "gable-green": "#093637",
+        "hunter-green": "#2F6247",
+        "brunswick-green": "#2D4F3E",
       },
       fontSize: {
         xsm: "0.688rem",

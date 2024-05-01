@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-dark px-[15%] ${lexend.className} md:px-[20%]`}>
+      <body className={`bg-dark text-neutral px-[15%] ${lexend.className} md:px-[15%] lg:px-[20%]`}>
         <Navbar />
         {children}
       </body>

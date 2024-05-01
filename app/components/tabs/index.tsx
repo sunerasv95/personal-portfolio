@@ -19,11 +19,11 @@ export const Tabs: FunctionComponent<props> = ({ tabs }) => {
 
     return (
         <div className='flex-column'>
-            <div className='h-20 flex justify-start'>
-                <ul className='inline-flex'>
+            <div className='py-2'>
+                <ul className='flex flex-wrap justify-start'>
                     {
                         tabs && tabs.map((tab: any, i: number) => (
-                            <li key={i} className='mr-3'>
+                            <li key={i} className='me-2 mb-3'>
                                 <Button
                                     mode={activeTab === i ? 'filled' : 'outlined'}
                                     size='sm'
@@ -36,7 +36,9 @@ export const Tabs: FunctionComponent<props> = ({ tabs }) => {
                 </ul>
             </div>
             <div>
-                <h3 className='text-h3 py-5 border-0 text-transparent bg-gradient-to-r from-[#0099A2] from-0% to-[#F1F8F0] to-100% bg-clip-text'>
+                <h3 className='text-h5 py-6 border-0 text-transparent 
+                bg-gradient-to-r from-highlight from-20% to-primary to-50% 
+                bg-clip-text'>
                     {tabs[activeTab].heading}
                 </h3>
                 {tabs[activeTab].content}

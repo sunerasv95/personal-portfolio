@@ -24,7 +24,7 @@ const DefaultCard: FunctionComponent<props> = ({
     onClick
 }) => {
     return (
-        <div className={`flex flex-col w-${width} h-${height} rounded-lg bg-[#2D4F3E] px-9 py-8`}>
+        <div className={`flex flex-col w-${width} h-${height} rounded-lg bg-brunswick-green px-9 py-8`}>
             <div className='flex justify-between items-start'>
                 <div className='flex flex-col'>
                     {

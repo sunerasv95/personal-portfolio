@@ -4,6 +4,7 @@ import SvgIcon from '../../icon/svg-icon';
 
 interface props {
     icon: string,
+    iconSize?: "sm" | "md" | "lg",
     background?: "filled" | "transparent",
     backgroundColor?: "string",
     onClick?: MouseEventHandler<HTMLButtonElement>
@@ -11,6 +12,7 @@ interface props {
 
 const IconButton: FunctionComponent<props> = ({
     icon,
+    iconSize = "md",
     background,
     backgroundColor,
     onClick
@@ -18,7 +20,7 @@ const IconButton: FunctionComponent<props> = ({
 
     return (
         <button className='p-1' onClick={onClick} type='button'>
-            <SvgIcon name={icon} size='md' />
+            <SvgIcon name={icon} size={iconSize} />
         </button>
     )
 }

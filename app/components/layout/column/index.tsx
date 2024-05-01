@@ -1,15 +1,15 @@
 import { FunctionComponent, ReactNode } from 'react'
 
 interface props {
-    contentVertically?: "start" | "center" | "end",
-    contentHorizontally?: "start" | "center" | "end",
+    classNames?: string,
     children: ReactNode
 }
 const Column: FunctionComponent<props> = ({
-    contentVertically = "center",
-    contentHorizontally = "center",
+    classNames = [],
     children
 }) =>
-    <div className={`w-1/3 flex justify-${contentHorizontally} items-${contentVertically}`}>{children}</div>
+    <div className={`bg-neutral flex flex-wrap ${classNames ? classNames : 'justify-center items-center'}`}>
+        {children}
+    </div>
 
 export default Column;

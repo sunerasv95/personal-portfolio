@@ -62,19 +62,20 @@ const tabs = [
         )
     },
     {
-        tabName: 'Education',
-        heading: 'Education',
-        content: (
-            <Timeline timeline={education} />
-        )
-    },
-    {
         tabName: 'Skills',
         heading: 'Technical Skills',
         content: (
             skills.map((skill, i) => (<Badge key={i}>{skill}</Badge>))
         )
     },
+    {
+        tabName: 'Education',
+        heading: 'Education',
+        content: (
+            <Timeline timeline={education} />
+        )
+    },
+
     {
         tabName: 'Personal',
         heading: 'Personal Background',
@@ -87,17 +88,13 @@ const tabs = [
 export default function About() {
     return (
         <Container size="screen">
-            <div className="flex">
-                <Column>
-                    <div className="px-8 mt-10">
-                        <Image src={"./images/face.svg"} width={460} height={460} alt='landing-page' />
-                    </div>
-                </Column>
-                <Column>
-                    <div className="px-8 mt-10">
-                        <Tabs tabs={tabs} />
-                    </div>
-                </Column>
+            <div className="flex flex-col lg:flex-row gap-8">
+                <div className="flex justify-center items-start lg:w-[50%]">
+                    <Image className="md:w-460 md:h-460" src={"./images/face.svg"} width={460} height={460} alt='landing-page' />
+                </div>
+                <div className="flex justify-center items-start lg:items-center lg:w-[50%]">
+                    <Tabs tabs={tabs} />
+                </div>
             </div>
         </Container>
     );
