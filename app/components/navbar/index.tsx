@@ -27,7 +27,7 @@ export const Navbar: FunctionComponent<props> = ({ navItems }) => {
                     <NavItem linkName='projects' path='/projects' />
                     <NavItem linkName='about' path='/about' />
                     <NavItem linkName='contact' path='/contact' />
-                    <NavItem linkName='blog' path='/blog' />
+                    {/* <NavItem linkName='blog' path='/blog' /> */}
                 </ul>
                 <div className='flex md:hidden lg:hidden'>
                     <IconButton icon='bars' iconSize="lg" onClick={() => setSidebarShow(!sidebarShow)} />
@@ -44,7 +44,7 @@ export const Navbar: FunctionComponent<props> = ({ navItems }) => {
                         <NavItem linkName='projects' path='projects' />
                         <NavItem linkName='about' path='about' />
                         <NavItem linkName='contact' path='contact' />
-                        <NavItem linkName='blog' path='blog' />
+                        {/* <NavItem linkName='blog' path='blog' /> */}
                     </ul>
                 </div>
             </nav>
